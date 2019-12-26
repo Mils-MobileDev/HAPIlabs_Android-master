@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_orange" />
+    <ScrollView
+        android:id="@+id/weight_view_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_header"
+        android:layout_above="@+id/weight_commentfieldcontainer"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/text_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_white">
+
+            <RelativeLayout
+                android:id="@+id/weight_community_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f7f7f7"
+                android:visibility="gone">
+
+                <com.anxa.hapilabs.ui.RoundedImageView
+                    android:id="@+id/weight_community_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <TextView
+                    android:id="@+id/weight_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/weight_community_avatar"
+                    android:text="April Patio"
+                    android:textColor="@color/text_blue_comment"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weightViewTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weight_community_header"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/weightViewTop_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:textAppearance="@style/blackNormal.ExtraLarge" />
+
+                <TextView
+                    android:id="@+id/weightViewTop_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/weight_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/weightViewTop">
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/weight_ImageContainer">
+                <ImageView
+                    android:id="@+id/weight_DefaultImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/weight_inner" />
+                    <TextView
+                        android:id="@+id/weight_deviceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/text_white"
+                        android:text=""/>
+</RelativeLayout>
+                <!-- checked -->
+                <LinearLayout
+                    android:id="@+id/weightView_checked"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/weight_ImageContainer"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/meal_approved_icon" />
+
+                    <TextView
+                        android:id="@+id/checked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="Checked"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/weight_Details1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weight_DefaultImage"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3.04">
+
+                    <!-- step take -->
+
+                    <RelativeLayout
+                        android:id="@+id/weight_Weight"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+
+                        <ImageView
+                            android:id="@+id/weight_WeightIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_weight" />
+
+                        <TextView
+                            android:id="@+id/weight_WeightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_WeightIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/weight_WeightLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_WeightIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BUTTON"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BodyFat"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BodyFatIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bodyfat" />
+
+                        <TextView
+                            android:id="@+id/weight_BodyFatText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_BodyFatIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BodyFatLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BodyFatIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BODYFAT"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_LeanMass"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_LeanMassIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_musclemass" />
+
+                        <TextView
+                            android:id="@+id/weight_LeanMassText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/weight_LeanMassIcon"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_LeanMassLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_LeanMassIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_LEANMASS"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/weight_Details2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weight_Details1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3.04">
+
+                    <!-- step take -->
+
+                    <RelativeLayout
+                        android:id="@+id/weight_WaterWeight"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_WaterWeightIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_waterweight" />
+
+                        <TextView
+                            android:id="@+id/weight_WaterWeightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_WaterWeightIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/weight_WaterWeightLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_WaterWeightIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_WATERWEIGHT"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BoneMass"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BoneMassIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bonemass" />
+
+                        <TextView
+                            android:id="@+id/weight_BoneMassText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_BoneMassIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BoneMassLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BoneMassIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BONEMASS"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BMI"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BMIIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bmi" />
+
+                        <TextView
+                            android:id="@+id/weight_BMIText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/weight_BMIIcon"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BMILabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BMIIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BMI"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/weight_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/weight_details_container">
+
+                <TextView
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/weight_comments_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/weight_coach_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="coachCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/weight_coach_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="Coach" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/weight_community_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="communityCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/weight_community_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="@string/MYCOMMUNITY_TITLE" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weight_hapi4u_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/weight_comments_ll"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/weight_hapi4u_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/hapi4u_blue"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <TextView
+                        android:id="@+id/weight_hapi4u_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/weight_hapi4u_iv"
+                        android:paddingLeft="10dp"
+                        android:text="HAPI 4U"
+                        android:textColor="@color/text_blue_comment"
+                        android:textSize="16dp"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/weight_hapi4u_avatar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/weight_hapi4u_num_image"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/hapicoach_default_profilepic"
+                        android:visibility="invisible"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/weight_hapi4u_num_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="invisible"
+                        android:src="@drawable/rounded_button_dark_orange_borderless" />
+
+                    <TextView
+                        android:id="@+id/weight_hapi4u_num_label"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        style="@style/whiteNormal"
+                        android:gravity="center"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/weight_hapi4u_smiley"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/meal_smiley_orange"
+                        android:layout_alignBottom="@+id/weight_hapi4u_avatar"
+                        android:layout_alignRight="@+id/weight_hapi4u_avatar"
+                        android:layout_alignEnd="@+id/weight_hapi4u_avatar"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.anxa.hapilabs.ui.CommentListLayout
+                android:id="@+id/weight_commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/weight_comments_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/weight_commentfieldcontainer"
+        layout="@layout/commentfield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible" />
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/weight_commentfieldcontainer"
+        android:background="@color/common_gray_separator" />
+
+</RelativeLayout>
